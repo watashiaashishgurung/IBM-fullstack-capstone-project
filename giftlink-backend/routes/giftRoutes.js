@@ -1,3 +1,10 @@
+/*jshint esversion: 8 */
+const express = require('express');
+const router = express.Router();
+const connectToDatabase = require('../models/db');
+const logger = require('..logger');
+
+// Get all gifts
 router.get('/', async (req, res) => {
     try {
         // Task 1: Connect to MongoDB and store connection to db constant
@@ -12,8 +19,8 @@ router.get('/', async (req, res) => {
         // Task 4: return the gifts using the res.json method
         res.json(gifts);
     } catch (e) {
-        console.error('Error fetching gifts:', e);
-        res.status(500).send('Error fetching gifts');
+        logger.console.error('oops something went wrong', e);
+        next(e);
     }
 });
 
