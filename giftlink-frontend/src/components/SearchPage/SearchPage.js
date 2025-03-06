@@ -90,9 +90,10 @@ function SearchPage() {
                                 <select id="conditionSelect" className="form-control my-1">
                                     <option value="">All</option>
                                     {conditions.map(condition => (
-                                    <option key={condition} value={condition}>{condition}</option>
+                                       <option key={condition} value={condition}>{condition}</option>
                                     ))}
                                 </select>
+
                             {/* Task 4: Implement an age range slider and display the selected value. */}
                                 {/* Age Range Slider */}
                                 <label htmlFor="ageRange">Less than {ageRange} years</label>
@@ -138,14 +139,14 @@ function SearchPage() {
                                         </button>
                                     </div>
                                 </div>
-                                ))
-                                ) : (
-                                <div className="alert alert-info" role="alert">
-                                    No products found. Please revise your filters.
-                                </div>
-                                )}
+                            ))
+                        ) : (
+                            <div className="alert alert-info" role="alert">
+                                No products found. Please revise your filters.
                             </div>
-                </div>
+                        )}
+                    </div>
+                 </div>
             </div>
         </div>
     );
