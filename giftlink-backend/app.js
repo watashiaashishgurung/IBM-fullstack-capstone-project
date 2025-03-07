@@ -44,7 +44,7 @@ app.use('/api/gifts', giftRoutes);
 // Search API Task 2: add the searchRoutes to the server by using the app.use() method.
 app.use('/api/search', searchRoutes)
 
-// AuthRoutes API
+// Profile update API 
 app.use('/api/auth', authRoutes);
 
 
