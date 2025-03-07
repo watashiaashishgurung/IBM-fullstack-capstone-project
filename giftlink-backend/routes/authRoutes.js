@@ -35,9 +35,15 @@ router.post('/register', async (req, res) => {
          // {{insert code here}}
         const existingEmail = await collection.findOne({ email: req.body.email });
 
+        if (existingEmail) {
+            logger.error('Email id already exists');
+            return res.status(400).json({ error: 'Email id already exists' });
+        }
+
         const salt = await bcryptjs.genSalt(10);
         const hash = await bcryptjs.hash(req.body.password, salt);
         const email = req.body.email;
+        console.log('email is', email);
 
         // {{insert code here}} //Task 4: Save user details in database
         const newUser = await collection.insertOne({
@@ -65,6 +71,7 @@ router.post('/register', async (req, res) => {
 
 //Login Endpoint
 router.post('/login', async (req, res) => {
+    console.log("\n\n Inside login")
     try {
         // Task 1: Connect to `giftsdb` in MongoDB through `connectToDatabase` in `db.js`.
         const db = await connectToDatabase();
@@ -114,9 +121,10 @@ router.put('/update', async (req, res) => {
     // Task 2: Validate the input using `validationResult` and return approiate message if there is an error.
         
     const errors = validationResult(req);
-
+    
     // Task 3: Check if `email` is present in the header and throw an appropriate error message if not present.
-  
+
+    
     if (!errors.isEmpty()) {
         logger.error('Validation errors in update request', errors.array());
         return res.status(400).json({ errors: errors.array() });
@@ -140,20 +148,18 @@ router.put('/update', async (req, res) => {
             logger.error('User not found');
             return res.status(404).json({ error: "User not found" });
         }
-        existingUser.firstName = req.body.name;
-        existingUser.updatedAt = new Date();new
 
-        // Task 6: update user credentials in database
+        existingUser.firstName = req.body.name;
+        existingUser.updatedAt = new Date();
+
+        //Task 6: Update user credentials in DB
         const updatedUser = await collection.findOneAndUpdate(
             { email },
             { $set: existingUser },
             { returnDocument: 'after' }
         );
 
-        if (!updatedUser.value) {
-            logger.error('User update failed');
-            return res.status(500).json({ error: 'User update failed' });
-        }
+
         // Task 7: create JWT authentication using secret key from .env file
         const payload = {
             user: {
@@ -161,10 +167,7 @@ router.put('/update', async (req, res) => {
             },
         };
         
-        if (!updatedUserResult.value) {
-            logger.error('User update failed');
-            return res.status(500).json({ error: 'User update failed' });
-        }
+        
 
         const authtoken = jwt.sign(payload, JWT_SECRET);
             logger.info('User updated successfully');
