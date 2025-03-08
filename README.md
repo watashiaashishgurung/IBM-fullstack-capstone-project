@@ -31,6 +31,7 @@ The GiftLink application follows a **structured directory architecture**, ensuri
  ┣ 📂 giftlink-backend (Express Backend)
  ┣ 📂 giftlink-frontend (React Frontend)
  ┣ 📂 sentiment (Sentiment Analysis Services)
+ ┣ 🪪 LICENSE (Apache License)
  ┣ 📜 README.md (Project Documentation)
  
 ```
@@ -68,103 +69,109 @@ The GiftLink application follows a **structured directory architecture**, ensuri
 ### Fullstack Capstone Project File-structure
 
 <details>
-  <summary>.github</summary>
-    
-- **ISSUE_TEMPLATE/**
-  - `custom.md`
-  - **workflows/**
-  - `main`
-</details>
-<details>
-  <summary>giftlink-backend</summary>
+  <summary>Fullstack Capstone Project File-structure</summary>
 
-  - **models/**
-    - `db.js`
-  - **routes/**
-    - `authRoutes.js`
-    - `giftRoutes.js`
-    - `searchRoutes.js`
-  - **util/**
-  - **import-mongo/**
+  <details>
+    <summary>.github</summary>
+      
+  - **ISSUE_TEMPLATE/**
+    - `custom.md`
+    - **workflows/**
+    - `main`
+  </details>
+  
+  <details>
+    <summary>giftlink-backend</summary>
+  
+    - **models/**
+      - `db.js`
+    - **routes/**
+      - `authRoutes.js`
+      - `giftRoutes.js`
+      - `searchRoutes.js`
+    - **util/**
+    - **import-mongo/**
+      - `.env`
+      - `.env.sample`
+      - `gifts.json`
+      - `index.js`
+      - `package-lock.json`
+      - `package.json`
     - `.env`
     - `.env.sample`
-    - `gifts.json`
-    - `index.js`
+    - `app.js`
+    - `deployment.yml`
+    - `Dockerfile`
+    - `logger.js`
     - `package-lock.json`
     - `package.json`
-  - `.env`
-  - `.env.sample`
-  - `app.js`
-  - `deployment.yml`
-  - `Dockerfile`
-  - `logger.js`
-  - `package-lock.json`
-  - `package.json`
-</details>
-
-<details>
-  <summary>giftlink-frontend</summary>
-
-  - **Dockerfile/**
-
-  - **node_modules/**
-  - **public/**
-    - **images/**
-    - **static/**
-  - **src/**
-    - **components/**
-      - **DetailsPage/**
-        - `DetailsPage.css`
-        - `DetailsPage.js`
-      - **LandingPage/**
-        - `LandingPage.css`
-        - `LandingPage.js`
-      - **LoginPage/**
-        - `LoginPage.css`
-        - `LoginPage.js`
-      - **MainPage/**
-        - `MainPage.js`
-      - **Navbar/**
-        - `Navbar.js`
-      - **ProductDetailsPage/**
-        - `ProductDetailsPage.js`
-      - **Profile/**
-        - `Profile.css`
-        - `Profile.js`
-      - **RegisterPage/**
-        - `RegisterPage.css`
-        - `RegisterPage.js`
-      - **SearchPage/**
-        - `SearchPage.css`
-        - `SearchPage.js`
-    - **context/**
-      - `AuthContext.js`
-    - `App.css`
-    - `App.js`
-    - `config.js`
-    - `index.css`
-    - `index.js`
-   </details>
-
-<details>
-  <summary>sentiment</summary>
+  </details>
   
-- **`index.js`/**
-- **`package-lock.json`/**
-- **`package.json`/**
-   </details>
-
-<details>
-  <summary> LICENSE</summary>
-
-- [`LICENSE`](./LICENSE)
-   </details>
-
-<details>
+  <details>
+    <summary>giftlink-frontend</summary>
+  
+    - **Dockerfile/**
+  
+    - **node_modules/**
+    - **public/**
+      - **images/**
+      - **static/**
+    - **src/**
+      - **components/**
+        - **DetailsPage/**
+          - `DetailsPage.css`
+          - `DetailsPage.js`
+        - **LandingPage/**
+          - `LandingPage.css`
+          - `LandingPage.js`
+        - **LoginPage/**
+          - `LoginPage.css`
+          - `LoginPage.js`
+        - **MainPage/**
+          - `MainPage.js`
+        - **Navbar/**
+          - `Navbar.js`
+        - **ProductDetailsPage/**
+          - `ProductDetailsPage.js`
+        - **Profile/**
+          - `Profile.css`
+          - `Profile.js`
+        - **RegisterPage/**
+          - `RegisterPage.css`
+          - `RegisterPage.js`
+        - **SearchPage/**
+          - `SearchPage.css`
+          - `SearchPage.js`
+      - **context/**
+        - `AuthContext.js`
+      - `App.css`
+      - `App.js`
+      - `config.js`
+      - `index.css`
+      - `index.js`
+  </details>
+  
+  <details>
+    <summary>sentiment</summary>
+    
+  - **`index.js`/**
+  - **`package-lock.json`/**
+  - **`package.json`/**
+  </details>
+  
+  <details>
+    <summary>LICENSE</summary>
+  
+  - [`LICENSE`](./LICENSE)
+  </details>
+  
+  <details>
     <summary>README.md</summary>
+  
+  - [`README.md`](./README.md)
+  </details>
 
-- [`README.md`](./README.md)
-   </details>
+</details>
 
 -----------------
 This project is licensed under the [` Apache License`](./LICENSE)

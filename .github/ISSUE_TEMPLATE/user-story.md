@@ -1,3 +1,6 @@
+[Link watashiaashishgurung's IBM JS Developer Full Stack Capstone Project ISSUES](https://github.com/watashiaashishgurung/IBM-fullstack-capstone-project/issues?q=is%3Aissue%20state%3Aclosed)
+
+[User story template](https://github.com/watashiaashishgurung/IBM-fullstack-capstone-project/settings)
 ---
 name: Custom issue template
 about: Describe this issue template's purpose here.
@@ -19,3 +22,5 @@ assignees: watashiaashishgurung
     Given [some context]
     When [certain action is taken]
     Then [the outcome of action is observed]
+
+---
