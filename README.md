@@ -75,7 +75,7 @@ The GiftLink application follows a **structured directory architecture**, ensuri
     <summary>.github</summary>
       
   - **ISSUE_TEMPLATE/**
-    - `custom.md`
+    - `user-story.md`
     - **workflows/**
     - `main`
   </details>
